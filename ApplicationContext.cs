@@ -5,10 +5,10 @@ namespace opcUaWebMVC;
 
 public sealed class ApplicationContext : DbContext
 {
-    private const string DB_IP = "192.168.1.5";
-    private const string DB_USER = "opc";
-    private const string DB_PASSWORD = "OPC12345";
-    private const string DB_NAME = "opcTest";
+    private const string DB_IP = "192.168.1.13";
+    private const string DB_USER = "alexey";
+    private const string DB_PASSWORD = "Y8D5H9Z1X3";
+    private const string DB_NAME = "opc";
     
     public DbSet<User> Users { get; set; } = null!;
     
