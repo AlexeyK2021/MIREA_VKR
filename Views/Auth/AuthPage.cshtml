@@ -1,0 +1,17 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<body>
+<h2>AuthPage</h2>
+@* <h4>Logged as @Model</h4> *@
+
+<form method="post">
+    <input type="text" name="login" placeholder="Username"/><br/>
+    <input type="password" name="passwd" placeholder="Password"/><br/>
+    <input type="submit" value="Send"/>
+</form>
+</body>

@@ -1,0 +1,23 @@
+﻿@{
+    int i = 0;
+
+    void TestFunc()
+    {
+        i++;
+    }
+}
+@model List<string>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>Time: @DateTime.Now.ToShortTimeString()</h2>
+    <text>@i</text>
+    <button onclick="@i++">Increment</button>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    @foreach (string personName in Model)
+    {
+        <li>@personName</li>
+    }
+</div>
