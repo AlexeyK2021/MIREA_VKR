@@ -4,9 +4,29 @@ using opcUaWebMVC.Models;
 
 namespace opcUaWebMVC.Controllers;
 
+public class UserSingleton
+{
+    private static UserSingleton? instance;
+    public User? currentUser { get; set; }
+
+    private UserSingleton()
+    {
+    }
+
+    public static UserSingleton GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = new UserSingleton();
+        }
+
+        return instance;
+    }
+}
+
 public class AuthController : Controller
 {
-    private readonly ILogger<AuthController> _logger;
+    // private readonly ILogger<AuthController> _logger;
 
     // public AuthController(ILogger<AuthController> logger)
     // {
@@ -17,14 +37,21 @@ public class AuthController : Controller
     public IActionResult AuthPage(string login, string passwd)
     {
         Console.WriteLine($"Login:{login}, passwd:{passwd}");
-        foreach (var user in UserRepository.users)
+        var users = new List<User>();
+        using (ApplicationContext db = new ApplicationContext())
         {
-            if (user.login.Equals(login) && user.passwd.Equals(passwd))
+            users = db.Users.ToList();
+            foreach (var user in users)
             {
-                Console.WriteLine("Login Success :)");
-                return Redirect("/Home/Index");
+                if (user.login.Equals(login) && user.passwd.Equals(passwd))
+                {
+                    Console.WriteLine("Login Success :)");
+                    UserSingleton.GetInstance().currentUser = user;
+                    return Redirect("/Home/Index");
+                }
             }
         }
+
         Console.WriteLine("Login Failed :(");
         return Redirect("/Auth/AuthPage");
     }
@@ -32,6 +59,13 @@ public class AuthController : Controller
     [HttpGet]
     public IActionResult AuthPage()
     {
+        Console.WriteLine($"Current user {UserSingleton.GetInstance().currentUser?.name}");
         return View("AuthPage");
+    }
+
+    public IActionResult Logout()
+    {
+        UserSingleton.GetInstance().currentUser = null;
+        return Redirect("/Auth/AuthPage");
     }
 }
