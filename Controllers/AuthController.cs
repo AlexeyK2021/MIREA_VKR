@@ -36,7 +36,7 @@ public class AuthController : Controller
     [HttpPost]
     public IActionResult AuthPage(string login, string passwd)
     {
-        Console.WriteLine($"Login:{login}, passwd:{passwd}");
+        // Console.WriteLine($"Login:{login}, passwd:{passwd}");
         var users = new List<User>();
         using (ApplicationContext db = new ApplicationContext())
         {
@@ -45,7 +45,7 @@ public class AuthController : Controller
             {
                 if (user.login.Equals(login) && user.passwd.Equals(passwd))
                 {
-                    Console.WriteLine("Login Success :)");
+                    // Console.WriteLine("Login Success :)");
                     UserSingleton.GetInstance().currentUser = user;
                     return Redirect("/Home/Index");
                 }
@@ -59,7 +59,7 @@ public class AuthController : Controller
     [HttpGet]
     public IActionResult AuthPage()
     {
-        Console.WriteLine($"Current user {UserSingleton.GetInstance().currentUser?.name}");
+        // Console.WriteLine($"Current user {UserSingleton.GetInstance().currentUser?.name}");
         return View("AuthPage");
     }
 

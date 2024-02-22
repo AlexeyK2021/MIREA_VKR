@@ -1,0 +1,22 @@
+﻿@model List<opcUaWebMVC.Models.User>
+
+@{
+    ViewBag.Title = "Users List";
+    Layout = "_Layout";
+    //TODO Список пользователей
+    string getRole(bool isAdmin) => isAdmin ? "Admin" : "Operator";
+}
+
+<html>
+<body>
+<ul>
+    @foreach (var user in Model)
+    {
+        <li>
+            <a asp-area="" asp-controller="User" asp-action="EditUser" asp-route-id="@user.id">@user.name (@getRole(user.isAdmin))</a>
+        </li>
+    }
+</ul>
+<a asp-area="" asp-controller="User" asp-action="AddUserPage">Add User</a>
+</body>
+</html>

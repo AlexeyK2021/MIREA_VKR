@@ -1,0 +1,20 @@
+﻿@model User
+
+@{
+    ViewBag.Title = "Edit user";
+    Layout = "_Layout";
+}
+
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+<form method="post">
+    <input type="text" name="name" placeholder="Name" value="@Model.name"/><br/>
+    <input type="text" name="login" placeholder="Login" value="@Model.login"/><br/>
+    <input type="password" name="passwd" placeholder="New password" value="@Model.passwd"/><br/>
+    <input type="hidden" name="id" value="@Model.id">
+    <input type="submit" name="action" value="Save"/>
+    <input type="submit" name="action" value="Delete"/>
+</form>
+
+</body>
+</html>

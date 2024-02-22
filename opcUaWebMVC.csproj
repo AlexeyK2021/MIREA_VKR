@@ -12,7 +12,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Pages\" />
+      <AdditionalFiles Include="Views\Auth\AuthPage.cshtml" />
+      <AdditionalFiles Include="Views\Plc\AddPlcPage.cshtml" />
+      <AdditionalFiles Include="Views\Plc\PlcList.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\User\AddUserPage.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\User\UserList.cshtml" />
     </ItemGroup>
 
 </Project>

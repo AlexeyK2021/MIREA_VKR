@@ -1,4 +1,4 @@
-﻿@model List<Plc>
+﻿@model List<opcUaWebMVC.Models.Database.Plc>?
 
 @{
     ViewBag.Title = "PLC list";
@@ -15,7 +15,9 @@
         <ul>
             @foreach (var plc in Model)
             {
-                <li>@plc.location (@plc.ip:@plc.port)</li>
+                <li>
+                    <a asp-area="" asp-controller="Plc" asp-action="EditPlc" asp-route-id="@plc.id">@plc.name - @plc.location (@plc.ip:@plc.port)</a>
+                </li>
             }
         </ul>
     }
@@ -23,6 +25,7 @@
     {
         <h3>No plc now!</h3>
     }
+    <a asp-area="" asp-controller="Plc" asp-action="AddPlcPage">Добавить контроллер</a>
 </div>
 </body>
 </html>
