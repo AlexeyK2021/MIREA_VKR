@@ -12,16 +12,16 @@
 <div>
     <h4>Add PLC</h4>
     <form method="post">
-        <label for="name">Name:</label><input type="text" name="name"/><br/>
+        <label for="name">Name:</label><input type="text" name="name" id="name"/><br/>
         <label for="locationId">Location:</label>
-        <select name="locationId">
+        <select name="locationId" id="locationId">
             @foreach (var location in locations)
             {
                 <option value="@location.id">@location.name</option>
             }
         </select><br/>
-        <label for="ip">IP:</label><input type="text" name="ip"/><br/>
-        <label for="Port">Port:</label><input type="text" name="port"/><br/>
+        <label for="ip">IP:</label><input type="text" name="ip" id="ip"/><br/>
+        <label for="port">Port:</label><input type="text" name="port" id="port"/><br/>
         <input type="submit" value="Add"/>
     </form>
 </div>

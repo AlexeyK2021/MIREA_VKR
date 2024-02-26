@@ -1,0 +1,631 @@
+### YamlMime:ManagedReference
+items:
+- uid: opcUaWebMVC.Models.User
+  commentId: T:opcUaWebMVC.Models.User
+  id: User
+  parent: opcUaWebMVC.Models
+  children:
+  - opcUaWebMVC.Models.User.#ctor(System.String,System.String,System.String,System.Boolean)
+  - opcUaWebMVC.Models.User.id
+  - opcUaWebMVC.Models.User.isAdmin
+  - opcUaWebMVC.Models.User.login
+  - opcUaWebMVC.Models.User.name
+  - opcUaWebMVC.Models.User.passwd
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: User
+  fullName: opcUaWebMVC.Models.User
+  type: Class
+  source:
+    remote:
+      path: Models/Database/User.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: User
+    path: Models/Database/User.cs
+    startLine: 4
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models
+  syntax:
+    content: >-
+      [Table("user")]
+
+      public class User
+    content.vb: >-
+      <Table("user")>
+
+      Public Class User
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.TableAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.TableAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: user
+- uid: opcUaWebMVC.Models.User.id
+  commentId: P:opcUaWebMVC.Models.User.id
+  id: id
+  parent: opcUaWebMVC.Models.User
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: User.id
+  fullName: opcUaWebMVC.Models.User.id
+  type: Property
+  source:
+    remote:
+      path: Models/Database/User.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: id
+    path: Models/Database/User.cs
+    startLine: 7
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models
+  syntax:
+    content: >-
+      [Column("id")]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Column("id")>
+
+      Public Property id As Integer
+  overload: opcUaWebMVC.Models.User.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+- uid: opcUaWebMVC.Models.User.name
+  commentId: P:opcUaWebMVC.Models.User.name
+  id: name
+  parent: opcUaWebMVC.Models.User
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: User.name
+  fullName: opcUaWebMVC.Models.User.name
+  type: Property
+  source:
+    remote:
+      path: Models/Database/User.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: name
+    path: Models/Database/User.cs
+    startLine: 8
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models
+  syntax:
+    content: >-
+      [Column("name")]
+
+      public string name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Column("name")>
+
+      Public Property name As String
+  overload: opcUaWebMVC.Models.User.name*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: opcUaWebMVC.Models.User.login
+  commentId: P:opcUaWebMVC.Models.User.login
+  id: login
+  parent: opcUaWebMVC.Models.User
+  langs:
+  - csharp
+  - vb
+  name: login
+  nameWithType: User.login
+  fullName: opcUaWebMVC.Models.User.login
+  type: Property
+  source:
+    remote:
+      path: Models/Database/User.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: login
+    path: Models/Database/User.cs
+    startLine: 9
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models
+  syntax:
+    content: >-
+      [Column("login")]
+
+      public string login { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Column("login")>
+
+      Public Property login As String
+  overload: opcUaWebMVC.Models.User.login*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: login
+- uid: opcUaWebMVC.Models.User.passwd
+  commentId: P:opcUaWebMVC.Models.User.passwd
+  id: passwd
+  parent: opcUaWebMVC.Models.User
+  langs:
+  - csharp
+  - vb
+  name: passwd
+  nameWithType: User.passwd
+  fullName: opcUaWebMVC.Models.User.passwd
+  type: Property
+  source:
+    remote:
+      path: Models/Database/User.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: passwd
+    path: Models/Database/User.cs
+    startLine: 10
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models
+  syntax:
+    content: >-
+      [Column("password")]
+
+      public string passwd { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Column("password")>
+
+      Public Property passwd As String
+  overload: opcUaWebMVC.Models.User.passwd*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: password
+- uid: opcUaWebMVC.Models.User.isAdmin
+  commentId: P:opcUaWebMVC.Models.User.isAdmin
+  id: isAdmin
+  parent: opcUaWebMVC.Models.User
+  langs:
+  - csharp
+  - vb
+  name: isAdmin
+  nameWithType: User.isAdmin
+  fullName: opcUaWebMVC.Models.User.isAdmin
+  type: Property
+  source:
+    remote:
+      path: Models/Database/User.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: isAdmin
+    path: Models/Database/User.cs
+    startLine: 12
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models
+  syntax:
+    content: >-
+      [Column("is_admin")]
+
+      public bool isAdmin { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Column("is_admin")>
+
+      Public Property isAdmin As Boolean
+  overload: opcUaWebMVC.Models.User.isAdmin*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: is_admin
+- uid: opcUaWebMVC.Models.User.#ctor(System.String,System.String,System.String,System.Boolean)
+  commentId: M:opcUaWebMVC.Models.User.#ctor(System.String,System.String,System.String,System.Boolean)
+  id: '#ctor(System.String,System.String,System.String,System.Boolean)'
+  parent: opcUaWebMVC.Models.User
+  langs:
+  - csharp
+  - vb
+  name: User(string, string, string, bool)
+  nameWithType: User.User(string, string, string, bool)
+  fullName: opcUaWebMVC.Models.User.User(string, string, string, bool)
+  type: Constructor
+  source:
+    remote:
+      path: Models/Database/User.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: .ctor
+    path: Models/Database/User.cs
+    startLine: 14
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models
+  syntax:
+    content: public User(string name, string login, string passwd, bool isAdmin)
+    parameters:
+    - id: name
+      type: System.String
+    - id: login
+      type: System.String
+    - id: passwd
+      type: System.String
+    - id: isAdmin
+      type: System.Boolean
+    content.vb: Public Sub New(name As String, login As String, passwd As String, isAdmin As Boolean)
+  overload: opcUaWebMVC.Models.User.#ctor*
+  nameWithType.vb: User.New(String, String, String, Boolean)
+  fullName.vb: opcUaWebMVC.Models.User.New(String, String, String, Boolean)
+  name.vb: New(String, String, String, Boolean)
+references:
+- uid: opcUaWebMVC.Models
+  commentId: N:opcUaWebMVC.Models
+  href: opcUaWebMVC.html
+  name: opcUaWebMVC.Models
+  nameWithType: opcUaWebMVC.Models
+  fullName: opcUaWebMVC.Models
+  spec.csharp:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Models
+    name: Models
+    href: opcUaWebMVC.Models.html
+  spec.vb:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Models
+    name: Models
+    href: opcUaWebMVC.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: opcUaWebMVC.Models.User.id*
+  commentId: Overload:opcUaWebMVC.Models.User.id
+  href: opcUaWebMVC.Models.User.html#opcUaWebMVC_Models_User_id
+  name: id
+  nameWithType: User.id
+  fullName: opcUaWebMVC.Models.User.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: opcUaWebMVC.Models.User.name*
+  commentId: Overload:opcUaWebMVC.Models.User.name
+  href: opcUaWebMVC.Models.User.html#opcUaWebMVC_Models_User_name
+  name: name
+  nameWithType: User.name
+  fullName: opcUaWebMVC.Models.User.name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: opcUaWebMVC.Models.User.login*
+  commentId: Overload:opcUaWebMVC.Models.User.login
+  href: opcUaWebMVC.Models.User.html#opcUaWebMVC_Models_User_login
+  name: login
+  nameWithType: User.login
+  fullName: opcUaWebMVC.Models.User.login
+- uid: opcUaWebMVC.Models.User.passwd*
+  commentId: Overload:opcUaWebMVC.Models.User.passwd
+  href: opcUaWebMVC.Models.User.html#opcUaWebMVC_Models_User_passwd
+  name: passwd
+  nameWithType: User.passwd
+  fullName: opcUaWebMVC.Models.User.passwd
+- uid: opcUaWebMVC.Models.User.isAdmin*
+  commentId: Overload:opcUaWebMVC.Models.User.isAdmin
+  href: opcUaWebMVC.Models.User.html#opcUaWebMVC_Models_User_isAdmin
+  name: isAdmin
+  nameWithType: User.isAdmin
+  fullName: opcUaWebMVC.Models.User.isAdmin
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: opcUaWebMVC.Models.User.#ctor*
+  commentId: Overload:opcUaWebMVC.Models.User.#ctor
+  href: opcUaWebMVC.Models.User.html#opcUaWebMVC_Models_User__ctor_System_String_System_String_System_String_System_Boolean_
+  name: User
+  nameWithType: User.User
+  fullName: opcUaWebMVC.Models.User.User
+  nameWithType.vb: User.New
+  fullName.vb: opcUaWebMVC.Models.User.New
+  name.vb: New

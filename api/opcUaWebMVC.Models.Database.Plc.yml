@@ -1,0 +1,709 @@
+### YamlMime:ManagedReference
+items:
+- uid: opcUaWebMVC.Models.Database.Plc
+  commentId: T:opcUaWebMVC.Models.Database.Plc
+  id: Plc
+  parent: opcUaWebMVC.Models.Database
+  children:
+  - opcUaWebMVC.Models.Database.Plc.#ctor(System.String,System.String,System.Int32,System.String)
+  - opcUaWebMVC.Models.Database.Plc.ToString
+  - opcUaWebMVC.Models.Database.Plc.id
+  - opcUaWebMVC.Models.Database.Plc.ip
+  - opcUaWebMVC.Models.Database.Plc.location
+  - opcUaWebMVC.Models.Database.Plc.locationId
+  - opcUaWebMVC.Models.Database.Plc.name
+  - opcUaWebMVC.Models.Database.Plc.port
+  langs:
+  - csharp
+  - vb
+  name: Plc
+  nameWithType: Plc
+  fullName: opcUaWebMVC.Models.Database.Plc
+  type: Class
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: Plc
+    path: Models/Database/Plc.cs
+    startLine: 4
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  syntax:
+    content: >-
+      [Table("plc")]
+
+      public class Plc
+    content.vb: >-
+      <Table("plc")>
+
+      Public Class Plc
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.TableAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.TableAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: plc
+- uid: opcUaWebMVC.Models.Database.Plc.id
+  commentId: P:opcUaWebMVC.Models.Database.Plc.id
+  id: id
+  parent: opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Plc.id
+  fullName: opcUaWebMVC.Models.Database.Plc.id
+  type: Property
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: id
+    path: Models/Database/Plc.cs
+    startLine: 7
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  syntax:
+    content: >-
+      [Column("id")]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Column("id")>
+
+      Public Property id As Integer
+  overload: opcUaWebMVC.Models.Database.Plc.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+- uid: opcUaWebMVC.Models.Database.Plc.name
+  commentId: P:opcUaWebMVC.Models.Database.Plc.name
+  id: name
+  parent: opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: Plc.name
+  fullName: opcUaWebMVC.Models.Database.Plc.name
+  type: Property
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: name
+    path: Models/Database/Plc.cs
+    startLine: 8
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  syntax:
+    content: >-
+      [Column("name")]
+
+      public string name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Column("name")>
+
+      Public Property name As String
+  overload: opcUaWebMVC.Models.Database.Plc.name*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: opcUaWebMVC.Models.Database.Plc.ip
+  commentId: P:opcUaWebMVC.Models.Database.Plc.ip
+  id: ip
+  parent: opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: ip
+  nameWithType: Plc.ip
+  fullName: opcUaWebMVC.Models.Database.Plc.ip
+  type: Property
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: ip
+    path: Models/Database/Plc.cs
+    startLine: 9
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  syntax:
+    content: >-
+      [Column("ip")]
+
+      public string ip { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Column("ip")>
+
+      Public Property ip As String
+  overload: opcUaWebMVC.Models.Database.Plc.ip*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ip
+- uid: opcUaWebMVC.Models.Database.Plc.port
+  commentId: P:opcUaWebMVC.Models.Database.Plc.port
+  id: port
+  parent: opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: port
+  nameWithType: Plc.port
+  fullName: opcUaWebMVC.Models.Database.Plc.port
+  type: Property
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: port
+    path: Models/Database/Plc.cs
+    startLine: 10
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  syntax:
+    content: >-
+      [Column("port")]
+
+      public string port { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Column("port")>
+
+      Public Property port As String
+  overload: opcUaWebMVC.Models.Database.Plc.port*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: port
+- uid: opcUaWebMVC.Models.Database.Plc.locationId
+  commentId: P:opcUaWebMVC.Models.Database.Plc.locationId
+  id: locationId
+  parent: opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: locationId
+  nameWithType: Plc.locationId
+  fullName: opcUaWebMVC.Models.Database.Plc.locationId
+  type: Property
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: locationId
+    path: Models/Database/Plc.cs
+    startLine: 11
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  syntax:
+    content: >-
+      [Column("location_id")]
+
+      public int locationId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Column("location_id")>
+
+      Public Property locationId As Integer
+  overload: opcUaWebMVC.Models.Database.Plc.locationId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: location_id
+- uid: opcUaWebMVC.Models.Database.Plc.location
+  commentId: P:opcUaWebMVC.Models.Database.Plc.location
+  id: location
+  parent: opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: location
+  nameWithType: Plc.location
+  fullName: opcUaWebMVC.Models.Database.Plc.location
+  type: Property
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: location
+    path: Models/Database/Plc.cs
+    startLine: 12
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  syntax:
+    content: public Location location { get; set; }
+    parameters: []
+    return:
+      type: opcUaWebMVC.Models.Database.Location
+    content.vb: Public Property location As Location
+  overload: opcUaWebMVC.Models.Database.Plc.location*
+- uid: opcUaWebMVC.Models.Database.Plc.#ctor(System.String,System.String,System.Int32,System.String)
+  commentId: M:opcUaWebMVC.Models.Database.Plc.#ctor(System.String,System.String,System.Int32,System.String)
+  id: '#ctor(System.String,System.String,System.Int32,System.String)'
+  parent: opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: Plc(string, string, int, string)
+  nameWithType: Plc.Plc(string, string, int, string)
+  fullName: opcUaWebMVC.Models.Database.Plc.Plc(string, string, int, string)
+  type: Constructor
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: .ctor
+    path: Models/Database/Plc.cs
+    startLine: 14
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  syntax:
+    content: public Plc(string ip, string port, int locationId, string name)
+    parameters:
+    - id: ip
+      type: System.String
+    - id: port
+      type: System.String
+    - id: locationId
+      type: System.Int32
+    - id: name
+      type: System.String
+    content.vb: Public Sub New(ip As String, port As String, locationId As Integer, name As String)
+  overload: opcUaWebMVC.Models.Database.Plc.#ctor*
+  nameWithType.vb: Plc.New(String, String, Integer, String)
+  fullName.vb: opcUaWebMVC.Models.Database.Plc.New(String, String, Integer, String)
+  name.vb: New(String, String, Integer, String)
+- uid: opcUaWebMVC.Models.Database.Plc.ToString
+  commentId: M:opcUaWebMVC.Models.Database.Plc.ToString
+  id: ToString
+  parent: opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Plc.ToString()
+  fullName: opcUaWebMVC.Models.Database.Plc.ToString()
+  type: Method
+  source:
+    remote:
+      path: Models/Database/Plc.cs
+      branch: main
+      repo: https://github.com/AlexeyK2021/MIREA_VKR.git
+    id: ToString
+    path: Models/Database/Plc.cs
+    startLine: 22
+  assemblies:
+  - opcUaWebMVC
+  namespace: opcUaWebMVC.Models.Database
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: opcUaWebMVC.Models.Database.Plc.ToString*
+references:
+- uid: opcUaWebMVC.Models.Database
+  commentId: N:opcUaWebMVC.Models.Database
+  href: opcUaWebMVC.html
+  name: opcUaWebMVC.Models.Database
+  nameWithType: opcUaWebMVC.Models.Database
+  fullName: opcUaWebMVC.Models.Database
+  spec.csharp:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Models
+    name: Models
+    href: opcUaWebMVC.Models.html
+  - name: .
+  - uid: opcUaWebMVC.Models.Database
+    name: Database
+    href: opcUaWebMVC.Models.Database.html
+  spec.vb:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Models
+    name: Models
+    href: opcUaWebMVC.Models.html
+  - name: .
+  - uid: opcUaWebMVC.Models.Database
+    name: Database
+    href: opcUaWebMVC.Models.Database.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: opcUaWebMVC.Models.Database.Plc.id*
+  commentId: Overload:opcUaWebMVC.Models.Database.Plc.id
+  href: opcUaWebMVC.Models.Database.Plc.html#opcUaWebMVC_Models_Database_Plc_id
+  name: id
+  nameWithType: Plc.id
+  fullName: opcUaWebMVC.Models.Database.Plc.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: opcUaWebMVC.Models.Database.Plc.name*
+  commentId: Overload:opcUaWebMVC.Models.Database.Plc.name
+  href: opcUaWebMVC.Models.Database.Plc.html#opcUaWebMVC_Models_Database_Plc_name
+  name: name
+  nameWithType: Plc.name
+  fullName: opcUaWebMVC.Models.Database.Plc.name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: opcUaWebMVC.Models.Database.Plc.ip*
+  commentId: Overload:opcUaWebMVC.Models.Database.Plc.ip
+  href: opcUaWebMVC.Models.Database.Plc.html#opcUaWebMVC_Models_Database_Plc_ip
+  name: ip
+  nameWithType: Plc.ip
+  fullName: opcUaWebMVC.Models.Database.Plc.ip
+- uid: opcUaWebMVC.Models.Database.Plc.port*
+  commentId: Overload:opcUaWebMVC.Models.Database.Plc.port
+  href: opcUaWebMVC.Models.Database.Plc.html#opcUaWebMVC_Models_Database_Plc_port
+  name: port
+  nameWithType: Plc.port
+  fullName: opcUaWebMVC.Models.Database.Plc.port
+- uid: opcUaWebMVC.Models.Database.Plc.locationId*
+  commentId: Overload:opcUaWebMVC.Models.Database.Plc.locationId
+  href: opcUaWebMVC.Models.Database.Plc.html#opcUaWebMVC_Models_Database_Plc_locationId
+  name: locationId
+  nameWithType: Plc.locationId
+  fullName: opcUaWebMVC.Models.Database.Plc.locationId
+- uid: opcUaWebMVC.Models.Database.Plc.location*
+  commentId: Overload:opcUaWebMVC.Models.Database.Plc.location
+  href: opcUaWebMVC.Models.Database.Plc.html#opcUaWebMVC_Models_Database_Plc_location
+  name: location
+  nameWithType: Plc.location
+  fullName: opcUaWebMVC.Models.Database.Plc.location
+- uid: opcUaWebMVC.Models.Database.Location
+  commentId: T:opcUaWebMVC.Models.Database.Location
+  parent: opcUaWebMVC.Models.Database
+  href: opcUaWebMVC.Models.Database.Location.html
+  name: Location
+  nameWithType: Location
+  fullName: opcUaWebMVC.Models.Database.Location
+- uid: opcUaWebMVC.Models.Database.Plc.#ctor*
+  commentId: Overload:opcUaWebMVC.Models.Database.Plc.#ctor
+  href: opcUaWebMVC.Models.Database.Plc.html#opcUaWebMVC_Models_Database_Plc__ctor_System_String_System_String_System_Int32_System_String_
+  name: Plc
+  nameWithType: Plc.Plc
+  fullName: opcUaWebMVC.Models.Database.Plc.Plc
+  nameWithType.vb: Plc.New
+  fullName.vb: opcUaWebMVC.Models.Database.Plc.New
+  name.vb: New
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: opcUaWebMVC.Models.Database.Plc.ToString*
+  commentId: Overload:opcUaWebMVC.Models.Database.Plc.ToString
+  href: opcUaWebMVC.Models.Database.Plc.html#opcUaWebMVC_Models_Database_Plc_ToString
+  name: ToString
+  nameWithType: Plc.ToString
+  fullName: opcUaWebMVC.Models.Database.Plc.ToString

@@ -1,0 +1,41 @@
+### YamlMime:TableOfContent
+items:
+- uid: opcUaWebMVC
+  name: opcUaWebMVC
+  items:
+  - uid: opcUaWebMVC.ApplicationContext
+    name: ApplicationContext
+  - uid: opcUaWebMVC.Logger
+    name: Logger
+- uid: opcUaWebMVC.Controllers
+  name: opcUaWebMVC.Controllers
+  items:
+  - uid: opcUaWebMVC.Controllers.AuthController
+    name: AuthController
+  - uid: opcUaWebMVC.Controllers.HomeController
+    name: HomeController
+  - uid: opcUaWebMVC.Controllers.LocationController
+    name: LocationController
+  - uid: opcUaWebMVC.Controllers.PlcController
+    name: PlcController
+  - uid: opcUaWebMVC.Controllers.UserController
+    name: UserController
+  - uid: opcUaWebMVC.Controllers.UserSingleton
+    name: UserSingleton
+- uid: opcUaWebMVC.Models
+  name: opcUaWebMVC.Models
+  items:
+  - uid: opcUaWebMVC.Models.ErrorViewModel
+    name: ErrorViewModel
+  - uid: opcUaWebMVC.Models.User
+    name: User
+- uid: opcUaWebMVC.Models.Database
+  name: opcUaWebMVC.Models.Database
+  items:
+  - uid: opcUaWebMVC.Models.Database.ControlParameter
+    name: ControlParameter
+  - uid: opcUaWebMVC.Models.Database.Location
+    name: Location
+  - uid: opcUaWebMVC.Models.Database.Plc
+    name: Plc
+memberLayout: SamePage

@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: opcUaWebMVC.Models
+  commentId: N:opcUaWebMVC.Models
+  id: opcUaWebMVC.Models
+  children:
+  - opcUaWebMVC.Models.ErrorViewModel
+  - opcUaWebMVC.Models.User
+  langs:
+  - csharp
+  - vb
+  name: opcUaWebMVC.Models
+  nameWithType: opcUaWebMVC.Models
+  fullName: opcUaWebMVC.Models
+  type: Namespace
+  assemblies:
+  - opcUaWebMVC
+references:
+- uid: opcUaWebMVC.Models.User
+  commentId: T:opcUaWebMVC.Models.User
+  parent: opcUaWebMVC.Models
+  href: opcUaWebMVC.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: opcUaWebMVC.Models.User
+- uid: opcUaWebMVC.Models.ErrorViewModel
+  commentId: T:opcUaWebMVC.Models.ErrorViewModel
+  href: opcUaWebMVC.Models.ErrorViewModel.html
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: opcUaWebMVC.Models.ErrorViewModel
+- uid: opcUaWebMVC.Models
+  commentId: N:opcUaWebMVC.Models
+  href: opcUaWebMVC.html
+  name: opcUaWebMVC.Models
+  nameWithType: opcUaWebMVC.Models
+  fullName: opcUaWebMVC.Models
+  spec.csharp:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Models
+    name: Models
+    href: opcUaWebMVC.Models.html
+  spec.vb:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Models
+    name: Models
+    href: opcUaWebMVC.Models.html

@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: opcUaWebMVC.Models.Database
+  commentId: N:opcUaWebMVC.Models.Database
+  id: opcUaWebMVC.Models.Database
+  children:
+  - opcUaWebMVC.Models.Database.ControlParameter
+  - opcUaWebMVC.Models.Database.Location
+  - opcUaWebMVC.Models.Database.Plc
+  langs:
+  - csharp
+  - vb
+  name: opcUaWebMVC.Models.Database
+  nameWithType: opcUaWebMVC.Models.Database
+  fullName: opcUaWebMVC.Models.Database
+  type: Namespace
+  assemblies:
+  - opcUaWebMVC
+references:
+- uid: opcUaWebMVC.Models.Database.ControlParameter
+  commentId: T:opcUaWebMVC.Models.Database.ControlParameter
+  href: opcUaWebMVC.Models.Database.ControlParameter.html
+  name: ControlParameter
+  nameWithType: ControlParameter
+  fullName: opcUaWebMVC.Models.Database.ControlParameter
+- uid: opcUaWebMVC.Models.Database.Location
+  commentId: T:opcUaWebMVC.Models.Database.Location
+  parent: opcUaWebMVC.Models.Database
+  href: opcUaWebMVC.Models.Database.Location.html
+  name: Location
+  nameWithType: Location
+  fullName: opcUaWebMVC.Models.Database.Location
+- uid: opcUaWebMVC.Models.Database.Plc
+  commentId: T:opcUaWebMVC.Models.Database.Plc
+  href: opcUaWebMVC.Models.Database.Plc.html
+  name: Plc
+  nameWithType: Plc
+  fullName: opcUaWebMVC.Models.Database.Plc
+- uid: opcUaWebMVC.Models.Database
+  commentId: N:opcUaWebMVC.Models.Database
+  href: opcUaWebMVC.html
+  name: opcUaWebMVC.Models.Database
+  nameWithType: opcUaWebMVC.Models.Database
+  fullName: opcUaWebMVC.Models.Database
+  spec.csharp:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Models
+    name: Models
+    href: opcUaWebMVC.Models.html
+  - name: .
+  - uid: opcUaWebMVC.Models.Database
+    name: Database
+    href: opcUaWebMVC.Models.Database.html
+  spec.vb:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Models
+    name: Models
+    href: opcUaWebMVC.Models.html
+  - name: .
+  - uid: opcUaWebMVC.Models.Database
+    name: Database
+    href: opcUaWebMVC.Models.Database.html

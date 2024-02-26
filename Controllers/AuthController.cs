@@ -4,6 +4,9 @@ using opcUaWebMVC.Models;
 
 namespace opcUaWebMVC.Controllers;
 
+/// <summary>
+/// Singleton-класс для хранения текущего пользователя
+/// </summary>
 public class UserSingleton
 {
     private static UserSingleton? instance;
@@ -24,6 +27,9 @@ public class UserSingleton
     }
 }
 
+/// <summary>
+/// Controller-класс для обработки страницы авторизации пользователя
+/// </summary>
 public class AuthController : Controller
 {
     // private readonly ILogger<AuthController> _logger;
@@ -33,10 +39,16 @@ public class AuthController : Controller
     //     _logger = logger;
     // }
 
+    /// <summary>
+    /// Метод для получения данных входа пользователя. Сравнивает данные с БД
+    /// </summary>
+    /// <param name="login">Логин пользователя</param>
+    /// <param name="passwd">Пароль пользователя</param>
+    /// <returns>Переадрессация на главную страницу или страницу входа</returns>
     [HttpPost]
     public IActionResult AuthPage(string login, string passwd)
     {
-        // Console.WriteLine($"Login:{login}, passwd:{passwd}");
+        Logger.debug("AuthPage", $"Login:{login}, passwd:{passwd}");
         var users = new List<User>();
         using (ApplicationContext db = new ApplicationContext())
         {
@@ -45,24 +57,31 @@ public class AuthController : Controller
             {
                 if (user.login.Equals(login) && user.passwd.Equals(passwd))
                 {
-                    // Console.WriteLine("Login Success :)");
+                    Logger.debug("AuthPage", "Login Success :)");
                     UserSingleton.GetInstance().currentUser = user;
                     return Redirect("/Home/Index");
                 }
             }
         }
 
-        Console.WriteLine("Login Failed :(");
         return Redirect("/Auth/AuthPage");
     }
 
+    /// <summary>
+    /// Метод ответа пользователю. Отправляет страницу пользователю
+    /// </summary>
+    /// <returns>View страницы входа</returns>
     [HttpGet]
     public IActionResult AuthPage()
     {
-        // Console.WriteLine($"Current user {UserSingleton.GetInstance().currentUser?.name}");
-        return View("AuthPage");
+        return View();
     }
 
+
+    /// <summary>
+    /// Метод выхода из системы
+    /// </summary>
+    /// <returns>Переадрессация на страницу входа</returns>
     public IActionResult Logout()
     {
         UserSingleton.GetInstance().currentUser = null;

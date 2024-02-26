@@ -4,6 +4,7 @@ using opcUaWebMVC.Models;
 
 namespace opcUaWebMVC.Controllers;
 
+
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;

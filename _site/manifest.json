@@ -1,0 +1,268 @@
+{
+  "source_base_path": "D:/Prog/C#/opcUaWebMVC",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.ApplicationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.ApplicationContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Controllers.AuthController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Controllers.HomeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Controllers.HomeController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Controllers.LocationController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Controllers.LocationController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Controllers.PlcController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Controllers.PlcController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Controllers.UserController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Controllers.UserController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Controllers.UserSingleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Controllers.UserSingleton.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Logger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Models.Database.ControlParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Models.Database.ControlParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Models.Database.Location.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Models.Database.Location.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Models.Database.Plc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Models.Database.Plc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Models.Database.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Models.Database.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Models.ErrorViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Models.ErrorViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Models.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/opcUaWebMVC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/opcUaWebMVC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "wwwroot/lib/jquery-validation/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "wwwroot/lib/jquery-validation/LICENSE.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

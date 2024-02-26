@@ -3,14 +3,28 @@ using opcUaWebMVC.Models.Database;
 
 namespace opcUaWebMVC.Controllers;
 
+/// <summary>
+/// Controller-класс для работы с расположением (location) ПЛК.
+/// </summary>
 public class LocationController : Controller
 {
+    
+    /// <summary>
+    /// Метод ответа страницей создания расположения пользователю
+    /// </summary>
+    /// <returns>Страница создания расположения (location)</returns>
     [HttpGet]
     public IActionResult AddLocationPage()
     {
         return View();
     }
 
+    
+    /// <summary>
+    /// Метод создания расположения ПЛК
+    /// </summary>
+    /// <param name="name">Имя расположения</param>
+    /// <returns>Переадрессация на список расположений</returns>
     [HttpPost]
     public IActionResult AddLocationPage(string name)
     {
@@ -22,9 +36,13 @@ public class LocationController : Controller
             db.SaveChanges();
         }
 
-        return Redirect("/Plc/PlcList");
+        return Redirect("/Location/LocationList");
     }
 
+    /// <summary>
+    /// Метод ответа пользователю страницей списка расположений
+    /// </summary>
+    /// <returns>Страница списка расроложений</returns>
     [HttpGet]
     public IActionResult LocationList()
     {
@@ -34,6 +52,11 @@ public class LocationController : Controller
         }
     }
 
+    /// <summary>
+    /// Метод изменения параметров расположения
+    /// </summary>
+    /// <param name="id">ID-номер расположения</param>
+    /// <returns>Переадрессация на список расположений</returns>
     [HttpGet]
     public IActionResult EditLocation(int id)
     {
@@ -52,6 +75,13 @@ public class LocationController : Controller
         }
         return Redirect("/Location/LocationList");
     }
+    /// <summary>
+    /// Метод сохранения иззменений расположения
+    /// </summary>
+    /// <param name="name"Имя расположения</param>
+    /// <param name="id">ID-номер расположения</param>
+    /// <param name="action">Параметр для определения действия (изменение/удаление)</param>
+    /// <returns>Переадрессация на список расположений</returns>
     [HttpPost]
     public IActionResult EditLocation(string name, int id, string action)
     {

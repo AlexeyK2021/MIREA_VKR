@@ -3,14 +3,29 @@ using opcUaWebMVC.Models;
 
 namespace opcUaWebMVC.Controllers;
 
+/// <summary>
+/// Controller-класс для обработки пользователей
+/// </summary>
 public class UserController : Controller
 {
+    /// <summary>
+    /// Метод возврата страницы создания нового пользователя
+    /// </summary>
+    /// <returns></returns>
     [HttpGet]
     public IActionResult AddUserPage()
     {
         return View();
     }
 
+    /// <summary>
+    /// Метод добавления нового пользователя в БД
+    /// </summary>
+    /// <param name="name">Имя пользователя</param>
+    /// <param name="login">Логин пользователя для входа</param>
+    /// <param name="passwd">Пароль пользователя для входа</param>
+    /// <param name="admin">Переменная для задания пользователю админского статуса</param>
+    /// <returns>Переадрессация на страницу-список пользователей</returns>
     [HttpPost]
     public IActionResult AddUserPage(string name, string login, string passwd, bool admin)
     {
@@ -24,6 +39,10 @@ public class UserController : Controller
         return Redirect("/User/UserList");
     }
 
+    /// <summary>
+    /// Метод возврата страницы-списка пользователей
+    /// </summary>
+    /// <returns></returns>
     public IActionResult UserList()
     {
         var users = new List<User>();
@@ -35,6 +54,11 @@ public class UserController : Controller
         return View(users);
     }
 
+    /// <summary>
+    /// Метод страницы изменения пользователя
+    /// </summary>
+    /// <param name="id">ID-номер пользователя для изменения</param>
+    /// <returns></returns>
     [HttpGet]
     public IActionResult EditUser(int id)
     {
@@ -56,6 +80,16 @@ public class UserController : Controller
         return Redirect("/User/UserList");
     }
 
+    /// <summary>
+    /// Метод сохранения изменений пользователя в БД
+    /// </summary>
+    /// <param name="name">Имя пользователя</param>
+    /// <param name="login">Логин пользователя для входа</param>
+    /// <param name="passwd">Пароль пользователя для входа</param>
+    /// <param name="admin">Статус админа (да/нет)</param>
+    /// <param name="id">ID-номер пользователя</param>
+    /// <param name="action">Действие кнопок (изменить/удалить)</param>
+    /// <returns></returns>
     [HttpPost]
     public IActionResult EditUser(string name, string login, string passwd, bool admin, int id, string action)
     {

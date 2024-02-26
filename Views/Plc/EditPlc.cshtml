@@ -12,18 +12,19 @@
 <body>
 <h4>Edit PLC</h4>
 <form method="post">
-     <label for="name">Name:</label><input type="text" name="name" placeholder="PLC name" value="@plc.name"/><br/>
-    @* <input type="" name="location" placeholder="PLC location" value="@Model.location"/><br/> *@
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="PLC name" value="@plc.name" /><br/>
+
     <label for="locationId">Location:</label>
-    <select name="locationId">
+    <select name="locationId" id="locationId">
         @foreach (var location in locations)
         {
             <option value="@location.id">@location.name</option>
         }
     </select><br/>
 
-    <label for="ip">IP:</label><input type="text" name="ip" placeholder="PLC IP address" value="@plc.ip"/><br/>
-    <label for="Port">Port:</label><input type="text" name="port" placeholder="PLC port" value="@plc.port"/><br/>
+    <label for="ip">IP:</label><input type="text" name="ip" id="ip" placeholder="PLC IP address" value="@plc.ip"/><br/>
+    <label for="port">Port:</label><input type="text" name="port" id="port" placeholder="PLC port" value="@plc.port"/><br/>
     <input type="hidden" name="id" value="@plc.id">
     <input type="submit" name="action" value="Save"/>
     <input type="submit" name="action" value="Delete"/>

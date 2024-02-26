@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: opcUaWebMVC.Controllers
+  commentId: N:opcUaWebMVC.Controllers
+  id: opcUaWebMVC.Controllers
+  children:
+  - opcUaWebMVC.Controllers.AuthController
+  - opcUaWebMVC.Controllers.HomeController
+  - opcUaWebMVC.Controllers.LocationController
+  - opcUaWebMVC.Controllers.PlcController
+  - opcUaWebMVC.Controllers.UserController
+  - opcUaWebMVC.Controllers.UserSingleton
+  langs:
+  - csharp
+  - vb
+  name: opcUaWebMVC.Controllers
+  nameWithType: opcUaWebMVC.Controllers
+  fullName: opcUaWebMVC.Controllers
+  type: Namespace
+  assemblies:
+  - opcUaWebMVC
+references:
+- uid: opcUaWebMVC.Controllers.UserSingleton
+  commentId: T:opcUaWebMVC.Controllers.UserSingleton
+  parent: opcUaWebMVC.Controllers
+  href: opcUaWebMVC.Controllers.UserSingleton.html
+  name: UserSingleton
+  nameWithType: UserSingleton
+  fullName: opcUaWebMVC.Controllers.UserSingleton
+- uid: opcUaWebMVC.Controllers.AuthController
+  commentId: T:opcUaWebMVC.Controllers.AuthController
+  href: opcUaWebMVC.Controllers.AuthController.html
+  name: AuthController
+  nameWithType: AuthController
+  fullName: opcUaWebMVC.Controllers.AuthController
+- uid: opcUaWebMVC.Controllers.HomeController
+  commentId: T:opcUaWebMVC.Controllers.HomeController
+  href: opcUaWebMVC.Controllers.HomeController.html
+  name: HomeController
+  nameWithType: HomeController
+  fullName: opcUaWebMVC.Controllers.HomeController
+- uid: opcUaWebMVC.Controllers.LocationController
+  commentId: T:opcUaWebMVC.Controllers.LocationController
+  href: opcUaWebMVC.Controllers.LocationController.html
+  name: LocationController
+  nameWithType: LocationController
+  fullName: opcUaWebMVC.Controllers.LocationController
+- uid: opcUaWebMVC.Controllers.PlcController
+  commentId: T:opcUaWebMVC.Controllers.PlcController
+  href: opcUaWebMVC.Controllers.PlcController.html
+  name: PlcController
+  nameWithType: PlcController
+  fullName: opcUaWebMVC.Controllers.PlcController
+- uid: opcUaWebMVC.Controllers.UserController
+  commentId: T:opcUaWebMVC.Controllers.UserController
+  href: opcUaWebMVC.Controllers.UserController.html
+  name: UserController
+  nameWithType: UserController
+  fullName: opcUaWebMVC.Controllers.UserController
+- uid: opcUaWebMVC.Controllers
+  commentId: N:opcUaWebMVC.Controllers
+  href: opcUaWebMVC.html
+  name: opcUaWebMVC.Controllers
+  nameWithType: opcUaWebMVC.Controllers
+  fullName: opcUaWebMVC.Controllers
+  spec.csharp:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Controllers
+    name: Controllers
+    href: opcUaWebMVC.Controllers.html
+  spec.vb:
+  - uid: opcUaWebMVC
+    name: opcUaWebMVC
+    href: opcUaWebMVC.html
+  - name: .
+  - uid: opcUaWebMVC.Controllers
+    name: Controllers
+    href: opcUaWebMVC.Controllers.html

@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: opcUaWebMVC
+  commentId: N:opcUaWebMVC
+  id: opcUaWebMVC
+  children:
+  - opcUaWebMVC.ApplicationContext
+  - opcUaWebMVC.Logger
+  langs:
+  - csharp
+  - vb
+  name: opcUaWebMVC
+  nameWithType: opcUaWebMVC
+  fullName: opcUaWebMVC
+  type: Namespace
+  assemblies:
+  - opcUaWebMVC
+references:
+- uid: opcUaWebMVC.ApplicationContext
+  commentId: T:opcUaWebMVC.ApplicationContext
+  href: opcUaWebMVC.ApplicationContext.html
+  name: ApplicationContext
+  nameWithType: ApplicationContext
+  fullName: opcUaWebMVC.ApplicationContext
+- uid: opcUaWebMVC.Logger
+  commentId: T:opcUaWebMVC.Logger
+  href: opcUaWebMVC.Logger.html
+  name: Logger
+  nameWithType: Logger
+  fullName: opcUaWebMVC.Logger
