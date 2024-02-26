@@ -9,13 +9,14 @@ public class Plc
     [Column("name")] public string name { get; set; }
     [Column("ip")] public string ip { get; set; }
     [Column("port")] public string port { get; set; }
-    [Column("location")] public string location { get; set; }
+    [Column("location_id")] public int locationId { get; set; }
+    public Location location { get; set; } = null!;
 
-    public Plc(string ip, string port, string location, string name)
+    public Plc(string ip, string port, int locationId, string name)
     {
         this.ip = ip;
         this.port = port;
-        this.location = location;
+        this.locationId = locationId;
         this.name = name;
     }
 

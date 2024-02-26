@@ -16,7 +16,7 @@
             @foreach (var plc in Model)
             {
                 <li>
-                    <a asp-area="" asp-controller="Plc" asp-action="EditPlc" asp-route-id="@plc.id">@plc.name - @plc.location (@plc.ip:@plc.port)</a>
+                    <a asp-area="" asp-controller="Plc" asp-action="EditPlc" asp-route-id="@plc.id">@plc.name - @plc.location.name (@plc.ip:@plc.port)</a>
                 </li>
             }
         </ul>

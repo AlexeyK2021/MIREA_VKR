@@ -1,8 +1,7 @@
-﻿@model Plc
-
-@{
+﻿@{
     ViewBag.Title = "Edit PLC";
     Layout = "_Layout";
+    var locations = ViewBag.locations;
 }
 
 <!DOCTYPE html>
@@ -11,11 +10,19 @@
 <body>
 <h4>Edit PLC</h4>
 <form method="post">
-    <input type="text" name="name" placeholder="PLC name" value="@Model.name"/><br/>
-    <input type="text" name="location" placeholder="PLC location" value="@Model.location"/><br/>
-    <input type="text" name="ip" placeholder="PLC IP address" value="@Model.ip"/><br/>
-    <input type="text" name="port" placeholder="PLC port" value="@Model.port"/><br/>
-    <input type="hidden" name="id" value="@Model.id">
+    <input type="text" name="name" placeholder="PLC name" value="@ViewBag.plc.name"/><br/>
+    @* <input type="" name="location" placeholder="PLC location" value="@Model.location"/><br/> *@
+    <select name="locationId">
+        @foreach (var location in locations)
+        {
+            <option value="@location.id">@location.name</option>
+        }
+    </select>
+    @* <select asp-for="name" asp-items="@ViewBag.locations"></select> *@
+    
+    <input type="text" name="ip" placeholder="PLC IP address" value="@ViewBag.plc.ip"/><br/>
+    <input type="text" name="port" placeholder="PLC port" value="@ViewBag.plc.port"/><br/>
+    <input type="hidden" name="id" value="@ViewBag.plc.id">
     <input type="submit" value="Save"/>
 </form>
 </body>

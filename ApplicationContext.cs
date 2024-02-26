@@ -13,6 +13,7 @@ public sealed class ApplicationContext : DbContext
 
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<Plc> Plcs { get; set; } = null!;
+    public DbSet<Location> Locations { get; set; } = null!;
 
     public ApplicationContext()
     {
