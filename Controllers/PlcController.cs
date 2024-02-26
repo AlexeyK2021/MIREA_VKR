@@ -9,35 +9,39 @@ public class PlcController : Controller
     [HttpGet]
     public IActionResult AddPlcPage()
     {
+        using (ApplicationContext db = new ApplicationContext())
+        {
+            ViewBag.locations = db.Locations.ToList();
+        }
+
         return View();
     }
 
-    // [HttpPost]
-    // public IActionResult AddPlcPage(string ip, string port, string location, string name)
-    // {
-    //     var plc = new Plc(ip, port, location, name);
-    //     Console.WriteLine(plc);
-    //     using (ApplicationContext db = new ApplicationContext())
-    //     {
-    //         db.Plcs.Add(plc);
-    //         db.SaveChanges();
-    //     }
-    //
-    //     return Redirect("/Plc/PlcList");
-    // }
+    [HttpPost]
+    public IActionResult AddPlcPage(string ip, string port, int locationId, string name)
+    {
+        var plc = new Plc(ip, port, locationId, name);
+        Console.WriteLine(plc.ToString());
+        using (ApplicationContext db = new ApplicationContext())
+        {
+            db.Plcs.Add(plc);
+            db.SaveChanges();
+        }
+
+        return Redirect("/Plc/PlcList");
+    }
 
     public IActionResult PlcList()
     {
         var plcs = new List<Plc>();
         using (ApplicationContext db = new ApplicationContext())
         {
-            plcs = db.Plcs.Include(plc=>plc.location).ToList();
+            plcs = db.Plcs.Include(plc => plc.location).ToList();
         }
-        
+
         return View(plcs);
     }
 
-    //TODO: Добавить изменение характеристик ПЛК
     [HttpGet]
     public IActionResult EditPlc(int id)
     {
@@ -45,7 +49,7 @@ public class PlcController : Controller
         var locations = new List<Location>();
         using (ApplicationContext db = new ApplicationContext())
         {
-            plcs = db.Plcs.Include(plc=>plc.location).ToList();
+            plcs = db.Plcs.Include(plc => plc.location).ToList();
             locations = db.Locations.ToList();
         }
 
@@ -63,7 +67,7 @@ public class PlcController : Controller
     }
 
     [HttpPost]
-    public IActionResult EditPlc(string name, int locationId, string ip, string port, int id)
+    public IActionResult EditPlc(string name, int locationId, string ip, string port, int id, string action)
     {
         Console.WriteLine($"name={name}; location={locationId}; ip={ip}; port={port}; id={id}; ");
         var plcs = new List<Plc>();
@@ -74,14 +78,24 @@ public class PlcController : Controller
             {
                 if (plc.id == id)
                 {
-                    plc.name = name;
-                    plc.locationId = locationId;
-                    plc.ip = ip;
-                    plc.port = port;
-                    db.SaveChanges();
+                    if (action == "Save")
+                    {
+                        plc.name = name;
+                        plc.locationId = locationId;
+                        plc.ip = ip;
+                        plc.port = port;
+                        db.SaveChanges();
+                    }
+                    else if (action == "Delete")
+                    {
+                        db.Plcs.Remove(plc);
+                        db.SaveChanges();
+                    }
                 }
             }
         }
+
         return Redirect("/Plc/PlcList");
     }
+    
 }
