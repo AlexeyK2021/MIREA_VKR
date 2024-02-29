@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Add controller";
     Layout = "_Layout";
-    var locations = ViewBag.locations;
+    var tanks = ViewBag.tanks;
 }
 <html>
 @* <head> *@
@@ -12,12 +12,12 @@
 <div>
     <h4>Add PLC</h4>
     <form method="post">
-        <label for="name">Name:</label><input type="text" name="name" id="name"/><br/>
-        <label for="locationId">Location:</label>
-        <select name="locationId" id="locationId">
-            @foreach (var location in locations)
+        <label for="model">Model:</label><input type="text" name="model" id="model"/><br/>
+        <label for="tank">Tank:</label>
+        <select name="tankId" id="tank">
+            @foreach (var tank in tanks)
             {
-                <option value="@location.id">@location.name</option>
+                <option value="@tank.id">@tank.name</option>
             }
         </select><br/>
         <label for="ip">IP:</label><input type="text" name="ip" id="ip"/><br/>

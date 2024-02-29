@@ -1,0 +1,28 @@
+﻿@model List<ControlParameter>
+
+@{
+    ViewBag.Title = "Parameters list";
+    Layout = "_Layout";
+}
+<html>
+<body>
+<div>
+    @if (Model.Count > 0)
+    {
+        <ul>
+            @foreach (var parameter in Model)
+            {
+                <li>
+                    <a asp-area="" asp-controller="Parameter" asp-action="EditParameter" asp-route-id="@parameter.id">@parameter.name</a>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <h3>No control parameters now!</h3>
+    }
+        <a asp-area="" asp-controller="Parameter" asp-action="AddParameter">Add Parameter</a>
+</div>
+</body>
+</html>

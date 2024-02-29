@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Add Parameter";
+    Layout = "_Layout";
+    List<ParameterType> types = ViewBag.types;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<div>
+    <h4>Add Parameter</h4>
+    <form method="post">
+        <label for="name">Name:</label><input type="text" name="name" id="name"/><br/>
+        <label for="min">Minimal Value:</label><input type="number" name="min" id="min"/><br/>
+        <label for="max">Maximum Value:</label><input type="number" name="max" id="max"/><br/>
+        <label for="opcMin">Min Value OPC Topic:</label><input type="text" name="opcMin" id="opcMin"/><br/>
+        <label for="opcMax">Max Value OPC Topic:</label><input type="text" name="opcMax" id="opcMax"/><br/>
+        <label for="opcCurr">Current Value OPC Topic:</label><input type="text" name="opcCurr" id="opcCurr"/><br/>
+        <label for="type">Parameter type:</label>
+        <select name="typeId" id="type">
+            @foreach (var type in types)
+            {
+                <option value="@type.id">@type.name</option>
+            }
+        </select><br/>
+        <input type="submit" value="Add"/>
+    </form>
+</div>
+</body>
+</html>

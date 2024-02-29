@@ -1,9 +1,8 @@
 ﻿@{
     ViewBag.Title = "Edit PLC";
     Layout = "_Layout";
-    var locations = ViewBag.locations;
+    var tanks = ViewBag.tanks;
     var plc = ViewBag.plc;
-    // string isChecked(int locId) => plc.locationId == locId ? "selected" : "";
 }
 
 <!DOCTYPE html>
@@ -12,14 +11,14 @@
 <body>
 <h4>Edit PLC</h4>
 <form method="post">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name" placeholder="PLC name" value="@plc.name" /><br/>
+    <label for="model">Model:</label>
+    <input type="text" name="model" id="model" placeholder="PLC model" value="@plc.model" /><br/>
 
-    <label for="locationId">Location:</label>
-    <select name="locationId" id="locationId">
-        @foreach (var location in locations)
+    <label for="tankId">Tank:</label>
+    <select name="tankId" id="tankId">
+        @foreach (var tank in tanks)
         {
-            <option value="@location.id">@location.name</option>
+            <option value="@tank.id">@tank.name</option>
         }
     </select><br/>
 

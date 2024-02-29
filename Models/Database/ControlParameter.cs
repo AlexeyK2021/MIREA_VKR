@@ -29,4 +29,12 @@ public class ControlParameter
         sensor = new List<Sensor>();
         logs = new List<ParameterLog>();
     }
+
+    public ControlParameter(string name, float minValue, float maxValue, int typeId)
+    {
+        this.name = name;
+        this.minValue = minValue;
+        this.maxValue = maxValue;
+        this.typeId = typeId;
+    }
 }

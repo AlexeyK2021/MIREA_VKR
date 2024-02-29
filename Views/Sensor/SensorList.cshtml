@@ -1,0 +1,38 @@
+﻿@model List<Sensor>
+
+@{
+    ViewBag.Title = "Sensors list";
+    Layout = "_Layout";
+
+    // string getLastSensorCheck(Sensor sensor)
+    // {
+    //     if (sensor.sensorChecks.Count() > 0)
+    //     {
+    //         var date = sensor.sensorChecks.OrderBy(sc => sc.date).First().date;
+    //         return date.ToString();
+    //     }
+    //     return "NaN";
+    // }
+}
+<html>
+<body>
+<div>
+    @if (Model.Count > 0)
+    {
+        <ul>
+            @foreach (var sensor in Model)
+            {
+                <li>
+                    <a asp-area="" asp-controller="Sensor" asp-action="EditSensor" asp-route-id="@sensor.id">@sensor.name connected to @sensor.plc.model (@sensor.plc.tank.name)</a>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <h3>No control parameters now!</h3>
+    }
+    <a asp-area="" asp-controller="Sensor" asp-action="AddSensor">Add Sensor</a>
+</div>
+</body>
+</html>

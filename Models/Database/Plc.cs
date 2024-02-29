@@ -23,8 +23,8 @@ public class Plc
         sensors = new List<Sensor>();
     }
 
-    // public override string ToString()
-    // {
-    //     return $"PLC ({name}): ip={ip}:{port}; location={location}";
-    // }
+    public override string ToString()
+    {
+        return $"PLC ({model}): ip={ip}:{port}; tankId={tankId}";
+    }
 }
