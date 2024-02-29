@@ -1,4 +1,4 @@
-﻿@model List<Location>?
+﻿@* @model List<Location>? *@
 
 @{
     ViewBag.Title = "Location list";
@@ -13,7 +13,7 @@
             @foreach (var location in Model)
             {
                 <li>
-                    <a asp-area="" asp-controller="Location" asp-action="EditLocation" asp-route-id="@location.id">@location.name</a>
+                    @* <a asp-area="" asp-controller="Location" asp-action="EditLocation" asp-route-id="@location.id">@location.name</a> *@
                 </li>
             }
         </ul>

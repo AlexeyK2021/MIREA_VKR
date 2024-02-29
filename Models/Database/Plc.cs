@@ -6,22 +6,25 @@ namespace opcUaWebMVC.Models.Database;
 public class Plc
 {
     [Column("id")] public int id { get; set; }
-    [Column("name")] public string name { get; set; }
+    [Column("model")] public string model { get; set; }
     [Column("ip")] public string ip { get; set; }
     [Column("port")] public string port { get; set; }
-    [Column("location_id")] public int locationId { get; set; }
-    public Location location { get; set; } = null!;
+    [Column("tank_id")] public int tankId { get; set; }
 
-    public Plc(string ip, string port, int locationId, string name)
+    public Tank tank { get; set; }
+    public ICollection<Sensor> sensors { get; set; }
+
+    public Plc(string model, string ip, string port, int tankId)
     {
+        this.model = model;
         this.ip = ip;
         this.port = port;
-        this.locationId = locationId;
-        this.name = name;
+        this.tankId = tankId;
+        sensors = new List<Sensor>();
     }
 
-    public override string ToString()
-    {
-        return $"PLC ({name}): ip={ip}:{port}; location={location}";
-    }
+    // public override string ToString()
+    // {
+    //     return $"PLC ({name}): ip={ip}:{port}; location={location}";
+    // }
 }

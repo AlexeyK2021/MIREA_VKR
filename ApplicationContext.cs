@@ -9,11 +9,21 @@ public sealed class ApplicationContext : DbContext
     private const string DB_IP = "192.168.1.103";
     private const string DB_USER = "alexey";
     private const string DB_PASSWORD = "Y8D5H9Z1X3";
-    private const string DB_NAME = "opcTest";
-
-    public DbSet<User> Users { get; set; } = null!;
+    private const string DB_NAME = "opcTest2";
+   
+    public DbSet<ControlParameter> ControlParameters { get; set; } = null!;
+    public DbSet<ParamOpcNames> ParamOpcNames { get; set; } = null!;
+    public DbSet<ParameterType> ParameterType { get; set; } = null!;
+    public DbSet<Sensor> Sensors { get; set; } = null!;
+    public DbSet<SensorCheck> SensorChecks { get; set; } = null!;
     public DbSet<Plc> Plcs { get; set; } = null!;
-    public DbSet<Location> Locations { get; set; } = null!;
+    public DbSet<Tank> Tanks { get; set; } = null!;
+    public DbSet<Process> Processes { get; set; } = null!;
+    public DbSet<ProcessInfo> ProcessInfos { get; set; } = null!;
+    public DbSet<ResultCode> ResultCodes { get; set; } = null!;
+    public DbSet<ParameterLog> ParameterLogs { get; set; } = null!;
+    public DbSet<User> Users { get; set; } = null!;
+
 
     public ApplicationContext()
     {

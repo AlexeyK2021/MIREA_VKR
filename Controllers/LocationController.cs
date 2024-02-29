@@ -28,13 +28,13 @@ public class LocationController : Controller
     [HttpPost]
     public IActionResult AddLocationPage(string name)
     {
-        var loc = new Location(name);
+        var loc = new Tank(name);
         Console.WriteLine(loc.ToString());
-        using (ApplicationContext db = new ApplicationContext())
-        {
-            db.Locations.Add(loc);
-            db.SaveChanges();
-        }
+        // using (ApplicationContext db = new ApplicationContext())
+        // {
+        //     db.Locations.Add(loc);
+        //     db.SaveChanges();
+        // }
 
         return Redirect("/Location/LocationList");
     }
@@ -43,38 +43,38 @@ public class LocationController : Controller
     /// Метод ответа пользователю страницей списка расположений
     /// </summary>
     /// <returns>Страница списка расроложений</returns>
-    [HttpGet]
-    public IActionResult LocationList()
-    {
-        using (ApplicationContext db = new ApplicationContext())
-        {
-            return View(db.Locations.ToList());
-        }
-    }
+    // [HttpGet]
+    // public IActionResult LocationList()
+    // {
+    //     using (ApplicationContext db = new ApplicationContext())
+    //     {
+    //         return View(db.Locations.ToList());
+    //     }
+    // }
 
     /// <summary>
     /// Метод изменения параметров расположения
     /// </summary>
     /// <param name="id">ID-номер расположения</param>
     /// <returns>Переадрессация на список расположений</returns>
-    [HttpGet]
-    public IActionResult EditLocation(int id)
-    {
-        var locs = new List<Location>();
-        using (ApplicationContext db = new ApplicationContext())
-        {
-            locs = db.Locations.ToList();
-        }
-
-        foreach (var loc in locs)
-        {
-            if (loc.id == id)
-            {
-                return View(loc);
-            }
-        }
-        return Redirect("/Location/LocationList");
-    }
+    // [HttpGet]
+    // public IActionResult EditLocation(int id)
+    // {
+    //     var locs = new List<Location>();
+    //     using (ApplicationContext db = new ApplicationContext())
+    //     {
+    //         locs = db.Locations.ToList();
+    //     }
+    //
+    //     foreach (var loc in locs)
+    //     {
+    //         if (loc.id == id)
+    //         {
+    //             return View(loc);
+    //         }
+    //     }
+    //     return Redirect("/Location/LocationList");
+    // }
     /// <summary>
     /// Метод сохранения иззменений расположения
     /// </summary>
@@ -82,30 +82,30 @@ public class LocationController : Controller
     /// <param name="id">ID-номер расположения</param>
     /// <param name="action">Параметр для определения действия (изменение/удаление)</param>
     /// <returns>Переадрессация на список расположений</returns>
-    [HttpPost]
-    public IActionResult EditLocation(string name, int id, string action)
-    {
-        using (ApplicationContext db = new ApplicationContext())
-        {
-            var locations = db.Locations.ToList();
-            foreach (var loc in locations)
-            {
-                if (loc.id == id)
-                {
-                    if (action == "Save")
-                    {
-                        loc.name = name;
-                        db.SaveChanges();
-                    }
-                    else if (action == "Delete")
-                    {
-                        db.Locations.Remove(loc);
-                        db.SaveChanges();
-                    }
-                }
-            }
-        }
-
-        return Redirect("/Location/LocationList");
-    }
+    // [HttpPost]
+    // public IActionResult EditLocation(string name, int id, string action)
+    // {
+    //     using (ApplicationContext db = new ApplicationContext())
+    //     {
+    //         var locations = db.Locations.ToList();
+    //         foreach (var loc in locations)
+    //         {
+    //             if (loc.id == id)
+    //             {
+    //                 if (action == "Save")
+    //                 {
+    //                     loc.name = name;
+    //                     db.SaveChanges();
+    //                 }
+    //                 else if (action == "Delete")
+    //                 {
+    //                     db.Locations.Remove(loc);
+    //                     db.SaveChanges();
+    //                 }
+    //             }
+    //         }
+    //     }
+    //
+    //     return Redirect("/Location/LocationList");
+    // }
 }
