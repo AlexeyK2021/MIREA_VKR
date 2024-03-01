@@ -1,5 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Add Sensor";
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.AddSensorTitle;
     Layout = "_Layout";
     List<Plc> plcs = ViewBag.plcs;
     List<ControlParameter> parameters = ViewBag.parameters;
@@ -10,19 +11,19 @@
 <html>
 <body>
 <div>
-    <h4>Add sensor</h4>
+    <h4>@lang.AddSensorLabel</h4>
     <form method="post">
-         <label for="name">Name:</label><input type="text" name="name" id="name"/><br/>
-        <label for="model">Model:</label><input type="text" name="model" id="model"/><br/>
+         <label for="name">@lang.AddSensorName:</label><input type="text" name="name" id="name"/><br/>
+        <label for="model">@lang.AddSensorModel:</label><input type="text" name="model" id="model"/><br/>
 
-        <label for="plcId">Plc:</label>
+        <label for="plcId">@lang.AddSensorPlc:</label>
         <select type="text" name="plcId" id="plcId">
             @foreach (var plc in plcs)
             {
                 <option value="@plc.id">@plc.model (Tank @plc.tank.name)</option>
             }
         </select><br/>
-        <label for="paramId">Control Parameter:</label>
+        <label for="paramId">@lang.AddSensorParameter:</label>
         <select type="text" name="paramId" id="paramId">
             @foreach (var param in parameters)
             {
@@ -30,7 +31,7 @@
             }
         </select><br/>
 
-        <input type="submit" value="Add"/>
+        <input type="submit" value="@lang.AddSensorAddButton"/>
     </form>
 </div>
 </body>

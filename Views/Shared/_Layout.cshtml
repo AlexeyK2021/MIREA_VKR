@@ -1,10 +1,13 @@
 ﻿@using opcUaWebMVC.Controllers
+@{
+    Language lang = Locale.Language;
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - opcUaWebMVC</title>
+    <title>@ViewBag.title - opcUaWebMVC</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/opcUaWebMVC.styles.css" asp-append-version="true"/>
@@ -23,35 +26,35 @@
                     @if (UserSingleton.GetInstance().currentUser != null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@lang.Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@lang.Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="UserList">Users</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="UserList">@lang.Users</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Plc" asp-action="PlcList">PLCs</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Plc" asp-action="PlcList">@lang.Plcs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Sensor" asp-action="SensorList">Sensors</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Sensor" asp-action="SensorList">@lang.Sensors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Parameter" asp-action="ParametersList">Parameters</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Parameter" asp-action="ParametersList">@lang.Parameters</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tank" asp-action="TanksList">Tanks</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Tank" asp-action="TanksList">@lang.Tanks</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout">Logout</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout">@lang.Logout</a>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="AuthPage">Login</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="AuthPage">@lang.Login</a>
                         </li>
                     }
                 </ul>

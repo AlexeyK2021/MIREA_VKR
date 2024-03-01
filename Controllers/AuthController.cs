@@ -39,8 +39,16 @@ public class AuthController : Controller
     /// <param name="passwd">Пароль пользователя</param>
     /// <returns>Переадрессация на главную страницу или страницу входа</returns>
     [HttpPost]
-    public IActionResult AuthPage(string login, string passwd)
+    public IActionResult AuthPage(string login, string passwd, string langName)
     {
+        foreach (var lang in Locale.Languages)
+        {
+            if (langName == lang.LangName)
+            {
+                Locale.Language = lang;
+            }
+        }
+        
         Logger.debug("AuthPage", $"Login:{login}, passwd:{passwd}");
         var users = new List<User>();
         using (ApplicationContext db = new ApplicationContext())

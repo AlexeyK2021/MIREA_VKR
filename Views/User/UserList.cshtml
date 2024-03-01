@@ -1,13 +1,15 @@
 ﻿@model List<opcUaWebMVC.Models.User>
 
 @{
-    ViewBag.Title = "Users List";
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.UserListTitle;
     Layout = "_Layout";
-    string getRole(bool isAdmin) => isAdmin ? "Admin" : "Operator";
+    string getRole(bool isAdmin) => isAdmin ? lang.UserListUserTypeAdmin : lang.UserListUserTypeOperator;
 }
 
 <html>
 <body>
+<h4>@lang.UserListLabel</h4>
 <ul>
     @foreach (var user in Model)
     {
@@ -16,6 +18,6 @@
         </li>
     }
 </ul>
-<a asp-area="" asp-controller="User" asp-action="AddUserPage">Add User</a>
+<a asp-area="" asp-controller="User" asp-action="AddUserPage">@lang.UserListAddButton</a>
 </body>
 </html>

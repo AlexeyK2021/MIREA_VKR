@@ -1,28 +1,26 @@
 ﻿<!DOCTYPE html>
-@{
-    ViewBag.Title = "Add controller";
+@{ 
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.AddPlcTitle;
     Layout = "_Layout";
     var tanks = ViewBag.tanks;
 }
 <html>
-@* <head> *@
-@*     <title>Add controller</title> *@
-@* </head> *@
 <body>
 <div>
-    <h4>Add PLC</h4>
+    <h4>@lang.AddPlcLabel</h4>
     <form method="post">
-        <label for="model">Model:</label><input type="text" name="model" id="model"/><br/>
-        <label for="tank">Tank:</label>
+        <label for="model">@lang.AddPlcModel:</label><input type="text" name="model" id="model"/><br/>
+        <label for="tank">@lang.AddPlcTank:</label>
         <select name="tankId" id="tank">
             @foreach (var tank in tanks)
             {
                 <option value="@tank.id">@tank.name</option>
             }
         </select><br/>
-        <label for="ip">IP:</label><input type="text" name="ip" id="ip"/><br/>
-        <label for="port">Port:</label><input type="text" name="port" id="port"/><br/>
-        <input type="submit" value="Add"/>
+        <label for="ip">@lang.AddPlcIp:</label><input type="text" name="ip" id="ip"/><br/>
+        <label for="port">@lang.AddPlcPort:</label><input type="text" name="port" id="port"/><br/>
+        <input type="submit" value="@lang.AddPlcAddButton"/>
     </form>
 </div>
 </body>

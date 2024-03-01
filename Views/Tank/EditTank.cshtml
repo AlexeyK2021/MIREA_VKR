@@ -1,6 +1,6 @@
-﻿@* @model Location *@
-@{
-    ViewBag.Title = "Edit Location";
+﻿@{
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.EditTankTitle;
     Layout = "_Layout";
 }
 
@@ -8,12 +8,14 @@
 
 <html>
 <body>
-<h4>Edit Location</h4>
-<form method="post">
-    <label for="name">Name:</label><input type="text" name="name" placeholder="PLC name" value="@Model.name" id="name"/><br/>
-    <input type="hidden" name="id" value="@Model.id">
-    <input type="submit" name="action" value="Save"/>
-    <input type="submit" name="action" value="Delete"/>
-</form>
+<div>
+    <h4>@lang.EditTankLabel</h4>
+    <form method="post">
+        <label for="name">@lang.EditTankName:</label><input type="text" name="name" value="@Model.name" id="name"/><br/>
+        <input type="hidden" name="id" value="@Model.id">
+        <input type="submit" name="action" value="@lang.EditTankSaveButton"/>
+        <input type="submit" name="action" value="@lang.EditTankDeleteButton"/>
+    </form>
+</div>
 </body>
 </html>

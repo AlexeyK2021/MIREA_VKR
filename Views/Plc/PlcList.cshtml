@@ -1,15 +1,14 @@
 ﻿@model List<opcUaWebMVC.Models.Database.Plc>
 
 @{
-    ViewBag.Title = "PLC list";
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.PlcListTitle;
     Layout = "_Layout";
 }
 <html>
-<head>
-    <title>PLC List</title>
-</head>
 <body>
 <div>
+    <h4>@lang.PlcListLabel</h4>
     @if (Model?.Count > 0)
     {
         <ul>
@@ -29,9 +28,9 @@
     }
     else
     {
-        <h3>No plc now!</h3>
+        <h3>@lang.PlcListNoPlcLabel</h3>
     }
-    <a asp-area="" asp-controller="Plc" asp-action="AddPlcPage">Add PLC</a>
+    <a asp-area="" asp-controller="Plc" asp-action="AddPlcPage">@lang.PlcListAddButton</a>
 </div>
 </body>
 </html>

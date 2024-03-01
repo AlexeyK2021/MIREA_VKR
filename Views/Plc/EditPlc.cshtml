@@ -1,5 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Edit PLC";
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.EditPlcTitle;
     Layout = "_Layout";
     var tanks = ViewBag.tanks;
     var plc = ViewBag.plc;
@@ -9,12 +10,12 @@
 
 <html>
 <body>
-<h4>Edit PLC</h4>
+<h4>@lang.EditPlcLabel</h4>
 <form method="post">
-    <label for="model">Model:</label>
+    <label for="model">@lang.EditPlcModel:</label>
     <input type="text" name="model" id="model" placeholder="PLC model" value="@plc.model" /><br/>
 
-    <label for="tankId">Tank:</label>
+    <label for="tankId">@lang.EditPlcTank:</label>
     <select name="tankId" id="tankId">
         @foreach (var tank in tanks)
         {
@@ -22,11 +23,11 @@
         }
     </select><br/>
 
-    <label for="ip">IP:</label><input type="text" name="ip" id="ip" placeholder="PLC IP address" value="@plc.ip"/><br/>
-    <label for="port">Port:</label><input type="text" name="port" id="port" placeholder="PLC port" value="@plc.port"/><br/>
+    <label for="ip">@lang.EditPlcIp:</label><input type="text" name="ip" id="ip" placeholder="PLC IP address" value="@plc.ip"/><br/>
+    <label for="port">@lang.EditPlcPort:</label><input type="text" name="port" id="port" placeholder="PLC port" value="@plc.port"/><br/>
     <input type="hidden" name="id" value="@plc.id">
-    <input type="submit" name="action" value="Save"/>
-    <input type="submit" name="action" value="Delete"/>
+    <input type="submit" name="action" value="@lang.EditPlcSaveButton"/>
+    <input type="submit" name="action" value="@lang.EditPlcDeleteButton"/>
 </form>
 </body>
 </html>

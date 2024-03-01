@@ -1,19 +1,20 @@
 ﻿@model User
 
 @{
-    ViewBag.Title = "Edit user";
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.EditUserTitle;
     Layout = "_Layout";
 }
 
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <body>
 <form method="post">
-    <input type="text" name="name" placeholder="Name" value="@Model.name"/><br/>
-    <input type="text" name="login" placeholder="Login" value="@Model.login"/><br/>
-    <input type="password" name="passwd" placeholder="New password" value="@Model.passwd"/><br/>
+    <label for="name">@lang.EditUserName:</label><input type="text" id="name" name="name" value="@Model.name"/><br/>
+    <label for="login">@lang.EditUserLogin:</label><input type="text" id="login" name="login" value="@Model.login"/><br/>
+    <label for="password">@lang.EditUserNewPassword:</label><input type="password" id="password" name="passwd" value="@Model.passwd"/><br/>
     <input type="hidden" name="id" value="@Model.id">
-    <input type="submit" name="action" value="Save"/>
-    <input type="submit" name="action" value="Delete"/>
+    <input type="submit" name="action" value="@lang.EditUserSaveButton"/>
+    <input type="submit" name="action" value="@lang.EditUserDeleteUser"/>
 </form>
 
 </body>

@@ -17,11 +17,10 @@ public class TankController : Controller
     [HttpPost]
     public IActionResult AddTankPage(string name, string? description)
     {
-        var loc = new Tank(name, description);
-        Console.WriteLine(loc.ToString());
+        var tank = new Tank(name, description);
         using (ApplicationContext db = new ApplicationContext())
         {
-            db.Tanks.Add(loc);
+            db.Tanks.Add(tank);
             db.SaveChanges();
         }
 

@@ -1,18 +1,19 @@
 ﻿@{
-    ViewBag.Title = "Add User";
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.AddUserTitle;
     Layout = "_Layout";
 }
 
 <html>
 <body>
-<h4>Add User</h4>
+<h4>@lang.AddUserLabel</h4>
 <form method="post">
-    <input type="text" name="name" placeholder="Name"/><br/>
-    <input type="text" name="login" placeholder="Login"/><br/>
-    <input type="password" name="passwd" placeholder="Password"/><br/>
-    <label>Admin?</label>
+    <input type="text" name="name" placeholder="@lang.AddUserNamePlaceholder"/><br/>
+    <input type="text" name="login" placeholder="@lang.AddUserLoginPlaceholder"/><br/>
+    <input type="password" name="passwd" placeholder="@lang.AddUserPasswordPlaceholder"/><br/>
+    <label>@lang.AddUserIsAdmin?</label>
     <input type="checkbox" name="admin" value="true"/><br/>
-    <input type="submit" value="Add"/>
+    <input type="submit" value="@lang.AddUserAddButton"/>
 </form>
 </body>
 </html>

@@ -1,5 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Add Parameter";
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.AddParameterTitle;
     Layout = "_Layout";
     List<ParameterType> types = ViewBag.types;
 }
@@ -10,22 +11,22 @@
 
 <body>
 <div>
-    <h4>Add Parameter</h4>
+    <h4>@lang.AddParameterLabel</h4>
     <form method="post">
-        <label for="name">Name:</label><input type="text" name="name" id="name"/><br/>
-        <label for="min">Minimal Value:</label><input type="number" name="min" id="min"/><br/>
-        <label for="max">Maximum Value:</label><input type="number" name="max" id="max"/><br/>
-        <label for="opcMin">Min Value OPC Topic:</label><input type="text" name="opcMin" id="opcMin"/><br/>
-        <label for="opcMax">Max Value OPC Topic:</label><input type="text" name="opcMax" id="opcMax"/><br/>
-        <label for="opcCurr">Current Value OPC Topic:</label><input type="text" name="opcCurr" id="opcCurr"/><br/>
-        <label for="type">Parameter type:</label>
+        <label for="name">@lang.AddParameterName:</label><input type="text" name="name" id="name"/><br/>
+        <label for="min">@lang.AddParameterMinValue:</label><input type="number" name="min" id="min"/><br/>
+        <label for="max">@lang.AddParameterMaxValue:</label><input type="number" name="max" id="max"/><br/>
+        <label for="opcMin">@lang.AddParameterMinValueOpcTopic:</label><input type="text" name="opcMin" id="opcMin"/><br/>
+        <label for="opcMax">@lang.AddParameterMaxValueOpcTopic</label><input type="text" name="opcMax" id="opcMax"/><br/>
+        <label for="opcCurr">@lang.AddParameterCurrValueOpcTopic:</label><input type="text" name="opcCurr" id="opcCurr"/><br/>
+        <label for="type">@lang.AddParameterType:</label>
         <select name="typeId" id="type">
             @foreach (var type in types)
             {
                 <option value="@type.id">@type.name</option>
             }
         </select><br/>
-        <input type="submit" value="Add"/>
+        <input type="submit" value="@lang.AddParameterAddButton"/>
     </form>
 </div>
 </body>

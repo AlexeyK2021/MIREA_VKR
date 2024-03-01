@@ -1,5 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Add Tank";
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.AddTankTitle;
     Layout = "_Layout";
 }
 
@@ -7,11 +8,13 @@
 
 <html>
 <body>
-<h4>Add Tank</h4>
-<form method="post">
-    <label for="name">Name:</label><input type="text" name="name" id="name"/><br/>
-    <label for="desc">Description:</label><input type="text" name="description" id="desc"/><br/>
-    <input type="submit" value="Add"/>
-</form>
+<div>
+    <h4>@lang.AddTankLabel</h4>
+    <form method="post">
+        <label for="name">@lang.AddTankName:</label><input type="text" name="name" id="name"/><br/>
+        <label for="desc">@lang.AddTankDescription:</label><input type="text" name="description" id="desc"/><br/>
+        <input type="submit" value="@lang.AddTankAddButton"/>
+    </form>
+</div>
 </body>
 </html>
