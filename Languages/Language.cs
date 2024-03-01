@@ -1,5 +1,10 @@
-﻿namespace opcUaWebMVC;
+﻿// ReSharper disable All
 
+namespace opcUaWebMVC;
+
+/// <summary>
+/// Класс, определяющий список надписей для перевода
+/// </summary>
 public abstract class Language
 {
     public abstract string LangName { get; set; }
@@ -34,13 +39,14 @@ public abstract class Language
     public abstract string EditUserLogin { get; set; }
     public abstract string EditUserNewPassword { get; set; }
     public abstract string EditUserSaveButton { get; set; }
-    public abstract string EditUserDeleteUser { get; set; }
+    public abstract string EditUserDeleteButton { get; set; }
 
     //Plc List Page
     public abstract string PlcListLabel { get; set; }
     public abstract string PlcListNoPlcLabel { get; set; }
     public abstract string PlcListAddButton { get; set; }
     public abstract string PlcListTitle { get; set; }
+    public abstract string Tank { get; set; }
 
     //Add PLC page
     public abstract string AddPlcTitle { get; set; }
@@ -75,6 +81,16 @@ public abstract class Language
     public abstract string AddSensorPlc { get; set; }
     public abstract string AddSensorParameter { get; set; }
     public abstract string AddSensorAddButton { get; set; }
+    
+    //Edit Sensor page
+    public abstract string EditSensorTitle { get; set; }
+    public abstract string EditSensorLabel { get; set; }
+    public abstract string EditSensorName { get; set; }
+    public abstract string EditSensorModel { get; set; }
+    public abstract string EditSensorPlc { get; set; }
+    public abstract string EditSensorParameter { get; set; }
+    public abstract string EditSensorSaveButton { get; set; }
+    
 
     //Parameters List
     public abstract string ParameterListTitle { get; set; }
@@ -93,7 +109,20 @@ public abstract class Language
     public abstract string AddParameterCurrValueOpcTopic { get; set; }
     public abstract string AddParameterType { get; set; }
     public abstract string AddParameterAddButton { get; set; }
-
+    
+    //Edit parameter Page
+    public abstract string EditParameterTitle { get; set; }
+    public abstract string EditParameterLabel { get; set; }
+    public abstract string EditParameterName { get; set; }
+    public abstract string EditParameterMinValue { get; set; }
+    public abstract string EditParameterMaxValue { get; set; }
+    public abstract string EditParameterMinValueOpcTopic { get; set; }
+    public abstract string EditParameterMaxValueOpcTopic { get; set; }
+    public abstract string EditParameterCurrValueOpcTopic { get; set; }
+    public abstract string EditParameterType { get; set; }
+    public abstract string EditParameterSaveButton { get; set; }
+    public abstract string EditParameterDeleteButton { get; set; }
+    
     //Tank List page
     public abstract string TankListTitle { get; set; }
     public abstract string TankListLabel { get; set; }
@@ -124,5 +153,5 @@ public abstract class Language
     public abstract string Tanks { get; set; }
     public abstract string Logout { get; set; }
     public abstract string Login { get; set; }
-   
+    
 }

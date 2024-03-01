@@ -30,12 +30,13 @@ public class English : Language
     public override string EditUserLogin { get; set; } = "Login";
     public override string EditUserNewPassword { get; set; } = "New Password";
     public override string EditUserSaveButton { get; set; } = "Save";
-    public override string EditUserDeleteUser { get; set; } = "Delete user";
+    public override string EditUserDeleteButton { get; set; } = "Delete user";
     
     public override string PlcListLabel { get; set; } = "PLC list";
     public override string PlcListNoPlcLabel { get; set; } = "No PLC";
     public override string PlcListAddButton { get; set; } = "Add PLC";
     public override string PlcListTitle { get; set; } = "PLC list";
+    public override string Tank { get; set; } = "Tank";
 
     public override string AddPlcTitle { get; set; } = "New PLC";
     public override string AddPlcLabel { get; set; } = "Create new PLC";
@@ -66,7 +67,15 @@ public class English : Language
     public override string AddSensorPlc { get; set; } = "PLC";
     public override string AddSensorParameter { get; set; } = "Parameter";
     public override string AddSensorAddButton { get; set; } = "Add";
-    
+
+    public override string EditSensorTitle { get; set; } = "Edit Sensor";
+    public override string EditSensorLabel { get; set; } = "Edit Sensor";
+    public override string EditSensorName { get; set; } = "Name";
+    public override string EditSensorModel { get; set; } = "Model";
+    public override string EditSensorPlc { get; set; } = "Connected to PLC";
+    public override string EditSensorParameter { get; set; } = "Parameter";
+    public override string EditSensorSaveButton { get; set; } = "Save";
+
     public override string ParameterListTitle { get; set; } = "Parameters";
     public override string ParameterListLabel { get; set; } = "Parameters list";
     public override string ParameterListNoLabel { get; set; } = "No parameters";
@@ -83,6 +92,18 @@ public class English : Language
     public override string AddParameterType { get; set; } = "Type";
     public override string AddParameterAddButton { get; set; } = "Add";
     
+    public override string EditParameterTitle { get; set; } = "Edit Parameter";
+    public override string EditParameterLabel { get; set; } = "Edit Parameter";
+    public override string EditParameterName { get; set; } = "Name";
+    public override string EditParameterMinValue { get; set; } = "Minimum value";
+    public override string EditParameterMaxValue { get; set; } = "Maximum value";
+    public override string EditParameterMinValueOpcTopic { get; set; } = "Min value OPC name";
+    public override string EditParameterMaxValueOpcTopic { get; set; } = "Max value OPC name";
+    public override string EditParameterCurrValueOpcTopic { get; set; } = "Current value OPC name";
+    public override string EditParameterType { get; set; } = "Type";
+    public override string EditParameterSaveButton { get; set; } = "Save";
+    public override string EditParameterDeleteButton { get; set; } = "Delete";
+
     public override string TankListTitle { get; set; } = "Tanks";
     public override string TankListLabel { get; set; } = "Tanks list";
     public override string TankListNoLabel { get; set; } = "No tanks!";
@@ -107,6 +128,7 @@ public class English : Language
     public override string Tanks { get; set; } = "Tanks";
     public override string Logout { get; set; } = "Log out";
     public override string Login { get; set; } = "Log in";
+   
 
     public English()
     { }

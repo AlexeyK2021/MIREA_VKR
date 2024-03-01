@@ -37,4 +37,8 @@ public class ControlParameter
         this.maxValue = maxValue;
         this.typeId = typeId;
     }
+
+    public ControlParameter()
+    {
+    }
 }

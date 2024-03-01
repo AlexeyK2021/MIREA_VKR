@@ -1,0 +1,39 @@
+﻿@{
+    Language lang = Locale.Language;
+    ViewBag.Title = lang.EditSensorTitle;
+    List<Plc> plcs = ViewBag.plcs;
+    List<ControlParameter> parameters = ViewBag.parameters;
+    Sensor sensor = ViewBag.sensor;
+}
+
+<!DOCTYPE html>
+
+<html>
+<body>
+<div>
+    <h4>@lang.EditSensorLabel</h4>
+    <form method="post">
+        <label for="name">@lang.EditSensorName:</label><input type="text" name="name" id="name" value="@sensor.name"/><br/>
+        <label for="model">@lang.EditSensorModel:</label><input type="text" name="model" id="model" value="@sensor.model"/><br/>
+
+        <label for="plcId">@lang.EditSensorPlc:</label>
+        <select type="text" name="plcId" id="plcId">
+            @foreach (var plc in plcs)
+            {
+                <option value="@plc.id">@plc.model (@lang.Tank @plc.tank.name)</option>
+            }
+        </select><br/>
+        <label for="paramId">@lang.EditSensorParameter:</label>
+        <select type="text" name="paramId" id="paramId">
+            @foreach (var param in parameters)
+            {
+                <option value="@param.id">@param.name (@param.type.name)</option>
+            }
+        </select><br/>
+        <input type="hidden" name="id" value="@sensor.id">
+        <input type="submit" name="action" value="@lang.EditSensorSaveButton" />
+        @* <input type="submit" name="action" value="@lang.EditSensorDeleteButton"/> *@
+    </form>
+</div>
+</body>
+</html>

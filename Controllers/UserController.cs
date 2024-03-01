@@ -100,7 +100,7 @@ public class UserController : Controller
             {
                 if (user.id == id)
                 {
-                    if (action == "Save")
+                    if (action == Locale.Language.EditUserSaveButton)
                     {
                         user.name = name;
                         user.login = login;
@@ -108,7 +108,7 @@ public class UserController : Controller
                         user.isAdmin = admin;
                         db.SaveChanges();
                     }
-                    else if (action == "Delete")
+                    else if (action == Locale.Language.EditUserDeleteButton)
                     {
                         db.Users.Remove(user);
                         db.SaveChanges();

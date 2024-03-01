@@ -32,12 +32,13 @@ public class Russian: Language
     public override string EditUserLogin { get; set; } = "Логин";
     public override string EditUserNewPassword { get; set; } = "Новый пароль";
     public override string EditUserSaveButton { get; set; } = "Сохранить";
-    public override string EditUserDeleteUser { get; set; } = "Удалить пользователя";
+    public override string EditUserDeleteButton { get; set; } = "Удалить пользователя";
     
     public override string PlcListLabel { get; set; } = "Список контроллеров";
     public override string PlcListNoPlcLabel { get; set; } = "В системе нет контроллеров";
     public override string PlcListAddButton { get; set; } = "Добавить контроллер";
     public override string PlcListTitle { get; set; } = "Контроллеры";
+    public override string Tank { get; set; } = "Ёмкость";
     
     public override string AddPlcTitle { get; set; } = "Новый контроллер";
     public override string AddPlcLabel { get; set; } = "Добавление нового контроллера";
@@ -69,6 +70,14 @@ public class Russian: Language
     public override string AddSensorParameter { get; set; } = "Параметр измерения";
     public override string AddSensorAddButton { get; set; } = "Добавить";
     
+    public override string EditSensorTitle { get; set; } = "Изменение датчика";
+    public override string EditSensorLabel { get; set; } = "Изменение датчика";
+    public override string EditSensorName { get; set; } = "Имя";
+    public override string EditSensorModel { get; set; } = "Модель";
+    public override string EditSensorPlc { get; set; } = "Подключен к ПЛК";
+    public override string EditSensorParameter { get; set; } = "Параметр изменения";
+    public override string EditSensorSaveButton { get; set; } = "Сохранить";
+
     public override string ParameterListTitle { get; set; } = "Параметры";
     public override string ParameterListLabel { get; set; } = "Список параметров для измерения";
     public override string ParameterListNoLabel { get; set; } = "В системе нет параметров для изменерения";
@@ -85,6 +94,18 @@ public class Russian: Language
     public override string AddParameterType { get; set; } = "Тип параметра";
     public override string AddParameterAddButton { get; set; } = "Добавить";
     
+    public override string EditParameterTitle { get; set; } = "Изменение параметра";
+    public override string EditParameterLabel { get; set; } = "Изменение параметра";
+    public override string EditParameterName { get; set; } = "Имя";
+    public override string EditParameterMinValue { get; set; } = "Минимальное значение";
+    public override string EditParameterMaxValue { get; set; } = "Максимальное значение";
+    public override string EditParameterMinValueOpcTopic { get; set; } = "Топик минимального значения";
+    public override string EditParameterMaxValueOpcTopic { get; set; } = "Топик максимального значения";
+    public override string EditParameterCurrValueOpcTopic { get; set; } = "Топик текущего значения";
+    public override string EditParameterType { get; set; } = "Тип параметра";
+    public override string EditParameterSaveButton { get; set; } = "Сохранить";
+    public override string EditParameterDeleteButton { get; set; } = "Удалить";
+
     public override string TankListTitle { get; set; } = "Ёмкости";
     public override string TankListLabel { get; set; } = "Список ёмкостей";
     public override string TankListNoLabel { get; set; } = "В системе нет ёмкостей";

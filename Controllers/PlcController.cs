@@ -78,7 +78,7 @@ public class PlcController : Controller
             {
                 if (plc.id == id)
                 {
-                    if (action == "Save")
+                    if (action == Locale.Language.EditPlcSaveButton)
                     {
                         plc.model = model;
                         plc.tankId = tankId;
@@ -86,7 +86,7 @@ public class PlcController : Controller
                         plc.port = port;
                         db.SaveChanges();
                     }
-                    else if (action == "Delete")
+                    else if (action == Locale.Language.EditPlcDeleteButton)
                     {
                         db.Plcs.Remove(plc);
                         db.SaveChanges();

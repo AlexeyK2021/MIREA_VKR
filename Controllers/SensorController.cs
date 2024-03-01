@@ -40,7 +40,7 @@ public class SensorController : Controller
     {
         using (ApplicationContext db = new ApplicationContext())
         {
-            var newSensor = new Sensor(name,model,plcId, paramId);
+            var newSensor = new Sensor(name, model, plcId, paramId);
             db.Sensors.Add(newSensor);
             db.SaveChanges();
         }
@@ -48,8 +48,48 @@ public class SensorController : Controller
         return Redirect("/Sensor/SensorList");
     }
 
-    public IActionResult EditSensor()
+    [HttpGet]
+    public IActionResult EditSensor(int id)
     {
-        throw new NotImplementedException();
+        using (ApplicationContext db = new ApplicationContext())
+        {
+            ViewBag.plcs = db.Plcs.Include(plc => plc.tank).ToList();
+            ViewBag.parameters = db.ControlParameters.Include(parameter => parameter.type).ToList();
+
+            var sensors = db.Sensors.ToList();
+            foreach (var sensor in sensors)
+            {
+                if (sensor.id == id)
+                {
+                    ViewBag.sensor = sensor;
+                }
+            }
+
+            return View();
+        }
+    }
+
+    [HttpPost]
+    public IActionResult EditSensor(string name, string model, int plcId, int paramId, int id, string action)
+    {
+        using (ApplicationContext db = new ApplicationContext())
+        {
+            var sensors = db.Sensors.ToList();
+            if (action == Locale.Language.EditSensorSaveButton)
+            {
+                foreach (var s in sensors)
+                {
+                    if (s.id == id)
+                    {
+                        s.model = model;
+                        s.name = name;
+                        s.plcId = plcId;
+                        s.controlParameterId = paramId;
+                        db.SaveChanges();
+                    }
+                }
+            }
+        }
+        return Redirect("/Sensor/SensorList");
     }
 }

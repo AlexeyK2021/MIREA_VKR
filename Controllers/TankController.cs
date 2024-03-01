@@ -65,12 +65,12 @@ public class TankController : Controller
             {
                 if (tank.id == id)
                 {
-                    if (action == "Save")
+                    if (action == Locale.Language.EditTankSaveButton)
                     {
                         tank.name = name;
                         db.SaveChanges();
                     }
-                    else if (action == "Delete")
+                    else if (action == Locale.Language.EditTankDeleteButton)
                     {
                         db.Tanks.Remove(tank);
                         db.SaveChanges();

@@ -47,8 +47,57 @@ public class ParameterController : Controller
         return Redirect("/Parameter/ParametersList");
     }
 
-    public IActionResult EditParameter()
+    [HttpGet]
+    public IActionResult EditParameter(int id)
     {
-        throw new NotImplementedException();
+        using (ApplicationContext db = new ApplicationContext())
+        {
+            ViewBag.types = db.ParameterType.ToList();
+
+            var parameters = db.ControlParameters
+                .Include(parameter => parameter.opcName)
+                .ToList();
+            foreach (var p in parameters)
+            {
+                if (p.id == id)
+                {
+                    ViewBag.parameter = p;
+                    return View();
+                }
+            }
+        }
+
+        return Redirect("/Parameter/ParametersList");
+    }
+
+    [HttpPost]
+    public IActionResult EditParameter(string name, float min, float max, string opcMin, string opcMax,
+        string opcCurr, int typeId, string action, int id)
+    {
+        using (ApplicationContext db = new ApplicationContext())
+        {
+            var paramsList = db.ControlParameters
+                .Include(parameter => parameter.opcName)
+                .ToList();
+            foreach (var param in paramsList)
+            {
+                if (param.id == id)
+                {
+                    if (action == Locale.Language.EditParameterSaveButton)
+                    {
+                        param.name = name;
+                        param.minValue = min;
+                        param.maxValue = max;
+                        param.typeId = typeId;
+                        param.opcName.minValueName = opcMin;
+                        param.opcName.maxValueName = opcMax;
+                        param.opcName.currentValueName = opcCurr;
+                        db.SaveChanges();
+                    }
+                }
+            }
+        }
+        
+        return Redirect("/Parameter/ParametersList");
     }
 }
